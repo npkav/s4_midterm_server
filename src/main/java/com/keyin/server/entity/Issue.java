@@ -8,7 +8,12 @@ public class Issue {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
+    
+    @Column(name = "customer_id")
+    private Long customerID;
+    
+    @Column(name = "assigned_rep_id")
+    private Long assignedRepID;
     
     private String title;
     private String description;
@@ -21,6 +26,12 @@ public class Issue {
 
     public Long getID() { return id; }
     public void setID(Long id) { this.id = id; }
+    
+    public Long getCustomerID() { return customerID; }
+    public void setCustomerID(Long customerID) { this.customerID = customerID; }
+    
+    public Long getAssignedRepID() { return assignedRepID; }
+    public void setAssignedRepID(Long assignedRepID) { this.assignedRepID = assignedRepID; }
     
     public String getTitle() { return title; }
     public void setTitle(String title) { this.title = title; }

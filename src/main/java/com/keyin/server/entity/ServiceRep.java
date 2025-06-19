@@ -17,6 +17,12 @@ public class ServiceRep {
     
     private String email;
     
+    @Column(name = "department_id")
+    private Long departmentID;
+    
+    @Column(name = "role_id")
+    private Long roleID;
+    
     
     
     public ServiceRep() {}
@@ -32,4 +38,10 @@ public class ServiceRep {
     
     public String getEmail() { return email; }
     public void setEmail(String email) { this.email = email; }
+    
+    public Long getDepartmentID() { return departmentID; }
+    public void setDepartmentID(Long departmentID) { this.departmentID = departmentID; }
+    
+    public Long getRoleID() { return roleID; }
+    public void setRoleID(Long roleID) { this.roleID = roleID; }
 } 
