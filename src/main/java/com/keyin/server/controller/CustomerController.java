@@ -33,7 +33,7 @@ public class CustomerController {
 
     @GetMapping("/search")
     public List<Customer> searchCustomersByLastName(@RequestParam String name) {
-        return customerRepository.findByLastNameContainingIgnoreCase(name);
+        return customerRepository.findByFirstNameOrLastName(name, name);
     }
 
     // UPDATE
