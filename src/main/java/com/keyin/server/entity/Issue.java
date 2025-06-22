@@ -24,6 +24,13 @@ public class Issue {
     
     public Issue() {}
 
+    public Issue(String title, String description, String status, String priority) {
+        this.title = title;
+        this.description = description;
+        this.status = status;
+        this.priority = priority;
+    }
+
     public Long getID() { return id; }
     public void setID(Long id) { this.id = id; }
     
@@ -44,4 +51,15 @@ public class Issue {
     
     public String getPriority() { return priority; }
     public void setPriority(String priority) { this.priority = priority; }
+    
+    @Override
+    public String toString() {
+        return "Issue{" +
+                "id=" + id +
+                ", title='" + title + '\'' +
+                ", description='" + description + '\'' +
+                ", status='" + status + '\'' +
+                ", priority='" + priority + '\'' +
+                '}';
+    }
 } 
