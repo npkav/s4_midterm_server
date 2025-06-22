@@ -10,5 +10,4 @@ import java.util.List;
 public interface CustomerRepository extends JpaRepository<Customer, Long> {
     
     List<Customer> findByFirstNameOrLastName(String firstName, String lastName);
-    
 }
