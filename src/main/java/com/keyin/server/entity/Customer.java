@@ -20,6 +20,13 @@ public class Customer {
     
     public Customer() {}
     
+    public Customer(String firstName, String lastName, String email) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.email = email;
+    }
+    
+    
     public Long getID() { return id; }
     public void setID(Long id) { this.id = id; }
     
@@ -31,4 +38,15 @@ public class Customer {
     
     public String getEmail() { return email; }
     public void setEmail(String email) { this.email = email; }
-} 
+
+
+    @Override
+    public String toString() {
+        return "Customer{" +
+                "id=" + id +
+                ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", email='" + email + '\'' +
+                '}';
+    }
+}
