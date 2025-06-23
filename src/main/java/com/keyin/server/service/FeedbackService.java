@@ -20,6 +20,18 @@ public class FeedbackService {
         return feedbackRepository.findById(id).orElse(null);
     }
 
+    public List<Feedback> getFeedbackByRepId(Long repId) {
+        return feedbackRepository.findByRepId(repId);
+    }
+
+    public Double getAverageRatingByRepId(Long repId) {
+        return feedbackRepository.findAverageRatingByRepId(repId);
+    }
+
+    public List<Feedback> getFeedbackByRating(int rating) {
+        return feedbackRepository.findByRating(rating);
+    }
+
     public Feedback saveFeedback(Feedback feedback) {
         return feedbackRepository.save(feedback);
     }
