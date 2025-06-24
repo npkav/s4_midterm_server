@@ -16,6 +16,10 @@ public class RepService {
     public List<ServiceRep> getAllServiceReps() {return RepRepository.findAll();}
     
     public ServiceRep getServiceRepByID(Long ID) {return RepRepository.findById(ID).orElse(null);}
+
+    public List<ServiceRep> getRepsByRole(Long roleId) {
+        return RepRepository.findByRoleID(roleId);
+    }
     
     public ServiceRep saveServiceRep(ServiceRep serviceRep) {return RepRepository.save(serviceRep);}
     
