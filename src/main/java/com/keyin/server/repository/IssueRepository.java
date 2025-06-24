@@ -11,4 +11,5 @@ import java.util.List;
 public interface IssueRepository extends JpaRepository<Issue, Long> {
     @Query("SELECT i FROM Issue i WHERE i.customerID = ?1")
     List<Issue> findByCustomerID(Long customerID);
+    List<Issue> findByAssignedRepId(Long repId);
 }
