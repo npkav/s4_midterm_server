@@ -7,8 +7,8 @@ import java.util.List;
 
 @Repository
 public interface RepRepository extends JpaRepository<ServiceRep, Long> {
-    List<ServiceRep> findByDepartmentID(Long departmentId);
-    List<ServiceRep> findByRoleID(Long roleId);
-    List<ServiceRep> findByDepartmentIDAndRoleID(Long departmentId, Long roleId);
+    List<ServiceRep> findByDepartmentID(Long departmentID);
+    List<ServiceRep> findByRoleID(Long roleID);
+    List<ServiceRep> findByDepartmentIDAndRoleID(Long departmentID, Long roleID);
     List<ServiceRep> findByFirstNameOrLastName(String firstName, String lastName);
 }

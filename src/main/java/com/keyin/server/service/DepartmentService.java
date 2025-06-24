@@ -22,8 +22,8 @@ public class DepartmentService {
     
     public Department getDepartmentByID(Long ID) {return departmentRepository.findById(ID).orElse(null);}
 
-    public List<ServiceRep> getRepsByDepartment(Long departmentId) {
-        return repRepository.findByDepartmentID(departmentId);
+    public List<ServiceRep> getRepsByDepartment(Long departmentID) {
+        return repRepository.findByDepartmentID(departmentID);
     }
     
     public Department saveDepartment(Department department) {return departmentRepository.save(department);}

@@ -26,13 +26,13 @@ public class FeedbackController {
     }
 
     @GetMapping("/rep/{repId}")
-    public List<Feedback> getFeedbackByRepId(@PathVariable Long repId) {
-        return feedbackService.getFeedbackByRepId(repId);
+    public List<Feedback> getFeedbackByRepID(@PathVariable Long repID) {
+        return feedbackService.getFeedbackByRepID(repID);
     }
 
     @GetMapping("/rep/{repId}/average-rating")
-    public Double getAverageRatingByRepId(@PathVariable Long repId) {
-        return feedbackService.getAverageRatingByRepId(repId);
+    public Double getAverageRatingByRepId(@PathVariable Long repID) {
+        return feedbackService.getAverageRatingByRepID(repID);
     }
 
     @GetMapping("/filter")
@@ -42,7 +42,7 @@ public class FeedbackController {
 
     @GetMapping("/{id}")
     public Feedback getFeedbackById(@PathVariable Long id) {
-        return feedbackService.getFeedbackById(id);
+        return feedbackService.getFeedbackByID(id);
     }
 
     // UPDATE

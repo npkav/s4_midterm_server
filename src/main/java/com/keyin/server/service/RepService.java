@@ -22,17 +22,17 @@ public class RepService {
     
     public ServiceRep getServiceRepByID(Long ID) {return RepRepository.findById(ID).orElse(null);}
 
-    public List<Issue> getIssuesByRepId(Long repId) {
-        return issueRepository.findByAssignedRepId(repId);
+    public List<Issue> getIssuesByRepID(Long repID) {
+        return issueRepository.findByAssignedRepID(repID);
     }
 
-    public List<ServiceRep> filterReps(Long departmentId, Long roleId) {
-        if (departmentId != null && roleId != null) {
-            return RepRepository.findByDepartmentIDAndRoleID(departmentId, roleId);
-        } else if (departmentId != null) {
-            return RepRepository.findByDepartmentID(departmentId);
-        } else if (roleId != null) {
-            return RepRepository.findByRoleID(roleId);
+    public List<ServiceRep> filterReps(Long departmentID, Long roleID) {
+        if (departmentID != null && roleID != null) {
+            return RepRepository.findByDepartmentIDAndRoleID(departmentID, roleID);
+        } else if (departmentID != null) {
+            return RepRepository.findByDepartmentID(departmentID);
+        } else if (roleID != null) {
+            return RepRepository.findByRoleID(roleID);
         } else {
             return RepRepository.findAll();
         }
@@ -42,8 +42,8 @@ public class RepService {
         return RepRepository.findByFirstNameOrLastName(name, name);
     }
 
-    public List<ServiceRep> getRepsByRole(Long roleId) {
-        return RepRepository.findByRoleID(roleId);
+    public List<ServiceRep> getRepsByRole(Long roleID) {
+        return RepRepository.findByRoleID(roleID);
     }
     
     public ServiceRep saveServiceRep(ServiceRep serviceRep) {return RepRepository.save(serviceRep);}

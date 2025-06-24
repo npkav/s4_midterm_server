@@ -16,16 +16,16 @@ public class FeedbackService {
         return feedbackRepository.findAll();
     }
 
-    public Feedback getFeedbackById(Long id) {
+    public Feedback getFeedbackByID(Long id) {
         return feedbackRepository.findById(id).orElse(null);
     }
 
-    public List<Feedback> getFeedbackByRepId(Long repId) {
-        return feedbackRepository.findByRepId(repId);
+    public List<Feedback> getFeedbackByRepID(Long repID) {
+        return feedbackRepository.findByRepID(repID);
     }
 
-    public Double getAverageRatingByRepId(Long repId) {
-        return feedbackRepository.findAverageRatingByRepId(repId);
+    public Double getAverageRatingByRepID(Long repID) {
+        return feedbackRepository.findAverageRatingByRepID(repID);
     }
 
     public List<Feedback> getFeedbackByRating(int rating) {

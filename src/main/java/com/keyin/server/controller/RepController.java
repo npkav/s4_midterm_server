@@ -24,15 +24,15 @@ public class RepController {
     public ServiceRep getServiceRepByID(@PathVariable Long id) {return repService.getServiceRepByID(id);}
 
     @GetMapping("/{id}/issues")
-    public List<Issue> getIssuesByRepId(@PathVariable Long id) {
-        return repService.getIssuesByRepId(id);
+    public List<Issue> getIssuesByRepID(@PathVariable Long id) {
+        return repService.getIssuesByRepID(id);
     }
 
     @GetMapping("/filter")
     public List<ServiceRep> filterReps(
-        @RequestParam(required = false) Long departmentId,
-        @RequestParam(required = false) Long roleId) {
-        return repService.filterReps(departmentId, roleId);
+        @RequestParam(required = false) Long departmentID,
+        @RequestParam(required = false) Long roleID) {
+        return repService.filterReps(departmentID, roleID);
     }
 
     @GetMapping("/search")
