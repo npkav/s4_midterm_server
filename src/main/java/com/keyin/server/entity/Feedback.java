@@ -1,5 +1,6 @@
 package com.keyin.server.entity;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.persistence.*;
 
 @Entity
@@ -25,15 +26,19 @@ public class Feedback {
     
     public Feedback() {}
 
+    @JsonProperty("id")
     public Long getID() { return id; }
     public void setID(Long id) { this.id = id; }
     
+    @JsonProperty("customerID")
     public Long getCustomerID() { return customerID; }
     public void setCustomerID(Long customerID) { this.customerID = customerID; }
     
+    @JsonProperty("repID")
     public Long getRepID() { return repID; }
     public void setRepID(Long repID) { this.repID = repID; }
     
+    @JsonProperty("issueID")
     public Long getIssueID() { return issueID; }
     public void setIssueID(Long issueID) { this.issueID = issueID; }
     

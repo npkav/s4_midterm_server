@@ -23,6 +23,7 @@ public class Role {
     
     public Role() {}
     
+    @JsonProperty("id")
     public Long getID() { return id; }
     public void setID(Long id) { this.id = id; }
     
