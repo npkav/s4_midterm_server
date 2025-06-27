@@ -20,11 +20,11 @@ public class ServiceRep {
 
     @ManyToOne
     @JoinColumn(name = "department_id", nullable = false)
-    private Department department;
+    private Department departmentID;
 
     @ManyToOne
     @JoinColumn(name = "role_id", nullable = false)
-    private Role role;
+    private Role roleID;
     
     
     
@@ -43,29 +43,32 @@ public class ServiceRep {
     public String getEmail() { return email; }
     public void setEmail(String email) { this.email = email; }
     
-    public Department getDepartment() { return department; }
-    public void setDepartment(Department department) { this.department = department; }
+    public Department getDepartmentID() { return departmentID; }
+    public void setDepartmentID(Department department) { this.departmentID = department; }
     
-    public Role getRole() { return role; }
-    public void setRole(Role role) { this.role = role; }
+    public Role getRoleID() { return roleID; }
+    public void setRoleID(Role role) { this.roleID = role; }
 
     @JsonProperty("departmentID")
     public void setDepartmentFromId(Long departmentId) {
-        this.department = new Department();
-        this.department.setID(departmentId);
+        this.departmentID = new Department();
+        this.departmentID.setID(departmentId);
     }
 
+    /*
     public Long getDepartmentID() {
         return department != null ? department.getID() : null;
     }
+    */
 
     @JsonProperty("roleID")
     public void setRoleFromId(Long roleId) {
-        this.role = new Role();
-        this.role.setID(roleId);
+        this.roleID = new Role();
+        this.roleID.setID(roleId);
     }
-
+    /*
     public Long getRoleID() {
         return role != null ? role.getID() : null;
     }
+    */
 } 
